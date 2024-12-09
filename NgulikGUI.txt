@@ -30,3 +30,32 @@ define gui.hover_muted_color = '#007a5b'
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#ffffff' #ngubah warna teks dialog saat game
 define gui.interface_text_color = '#ffffff' #ngubah warna teks isi dari opsi di tampilan awal
+
+## Fonts and Font Sizes ########################################################
+
+## The font used for in-game text.
+define gui.text_font = "DejaVuSans.ttf"
+
+## The font used for character names.
+define gui.name_text_font = "DejaVuSans.ttf"
+
+## The font used for out-of-game text.
+define gui.interface_text_font = "DejaVuSans.ttf"
+
+## The size of normal dialogue text. isi dari opsi Help di tampilan awal juga ikut gede, ngubah ukuran teks di dalam game
+define gui.text_size = 22
+
+## The size of character names. ngubah ukuran teks nama karakter dalam game
+define gui.name_text_size = 30
+
+## The size of text in the game's user interface. ngubah ukuran teks opsi di tampilan awal dan saat quit game
+define gui.interface_text_size = 22
+
+## The size of labels in the game's user interface. ngubah ukuran isi teks opsi di tampilan awal 
+define gui.label_text_size = 24
+
+## The size of text on the notify screen.
+define gui.notify_text_size = 16
+
+## The size of the game's title. ngubah ukuran teks judul game di kanan bawah
+define gui.title_text_size = 50
