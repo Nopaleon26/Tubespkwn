@@ -1,0 +1,32 @@
+## Colors ######################################################################
+##
+## The colors of text in the interface.
+
+## An accent color used throughout the interface to label and highlight text. ngubah semua warna teks di awal sebelum mulai game. ngubah semua warna teks di awal sebelum mulai game (bagian dalam opsi aja, bagian kiri opsi warnanya ga berubah. warna judul berubah)
+define gui.accent_color = '#00cc99'
+
+## The color used for a text button when it is neither selected nor hovered. ngubah warna tulisan yang di awal bagian kiri aja (ga semua warna teks keubah), juga ngeubah yes no di quit game
+define gui.idle_color = '#888888'
+
+## The small color is used for small text, which needs to be brighter/darker to
+## achieve the same effect. warna text di bagian bawah saat game berubah (Back,History,...)
+define gui.idle_small_color = '#aaaaaa'
+
+## The color that is used for buttons and bars that are hovered. ngubah warna background opsi saat kita mau neken
+define gui.hover_color = '#66e0c1'
+
+## The color used for a text button when it is selected but not focused. A
+## button is selected if it is the current screen or preference value. ngubah background warna saat tombol opsi udah ditekan
+define gui.selected_color = '#ffffff'
+
+## The color used for a text button when it cannot be selected. ngubah warna teks pada opsi Load yang masih kosong savenya, juga bagian bawah Back saat di game
+define gui.insensitive_color = '#8888887f'
+
+## Colors used for the portions of bars that are not filled in. These are not
+## used directly, but are used when re-generating bar image files.
+define gui.muted_color = '#00513d'
+define gui.hover_muted_color = '#007a5b'
+
+## The colors used for dialogue and menu choice text.
+define gui.text_color = '#ffffff' #ngubah warna teks dialog saat game
+define gui.interface_text_color = '#ffffff' #ngubah warna teks isi dari opsi di tampilan awal
