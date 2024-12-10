@@ -392,6 +392,3 @@ define gui.nvl_button_xalign = 0.0
 define gui.language = "unicode"
 
 
-## The borders of the box containing the character's name, in left, top, right,
-## bottom order. geser" nama karakter dalam game (kiri, atas, kanan, bawah)
-define gui.namebox_borders = Borders(5, 5, 5, 5)
