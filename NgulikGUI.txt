@@ -1,3 +1,7 @@
+##nambah font, 
+##di folder renpy -8.3.3-sdk, lalu ke folder renpy, lalu ke folder common dan bisa copas font yang diinginkan
+
+
 ## Colors ######################################################################
 ##
 ## The colors of text in the interface.
