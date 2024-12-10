@@ -93,7 +93,7 @@ define gui.namebox_height = None
 
 --
 
-## Positioning and Spacing #####################################################
+## Positioning and Spacing (line 244) #####################################################
 ##
 ## These variables control the positioning and spacing of various user interface
 ## elements.
