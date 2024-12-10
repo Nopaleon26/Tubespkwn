@@ -64,6 +64,12 @@ define gui.notify_text_size = 16
 ## The size of the game's title. ngubah ukuran teks judul game di kanan bawah
 define gui.title_text_size = 50
 
+## Main and Game Menus #########################################################
+
+## The images used for the main and game menus.
+define gui.main_menu_background = "gui/main_menu.png"
+define gui.game_menu_background = "gui/game_menu.png"
+
 ## Dialogue ####################################################################
 ##
 ## These variables control how dialogue is displayed on the screen one line at a
