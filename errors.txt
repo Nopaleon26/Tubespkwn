@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 312: expected a keyword argument, colon, or end of line.
+    textbutton _("Preferences") xpos  ypos 200 action ShowMenu("preferences")
+                                           ^
+
+Ren'Py Version: Ren'Py 8.3.3.24111502
+Tue Dec 17 16:02:53 2024
