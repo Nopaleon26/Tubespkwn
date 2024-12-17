@@ -1,4 +1,4 @@
-﻿# Define the characters with colors
+# Define the characters with colors
 define a = Character("Anita", color="#FF69B4")  # Pink color for Anita
 define an = Character("Atasan", color="#FFD700") # Gold color for Atasan
 define d = Character("Dita", color="#1E90FF")   # Blue color for Dita
@@ -11,22 +11,23 @@ define t1 = Character("Teman 1", color="#FF4500") # Orange color for Teman 1
 define t2 = Character("Teman 2", color="#FF4500") # Orange color for Teman 2
 
 # Define the images
-image bg_dining_room = im.Scale("dapur.jpg", config.screen_width, config.screen_height)
-image garasi = im.Scale("garasi.jpg", config.screen_width, config.screen_height)
+image bg_dining_room = im.Scale("dapur.png", config.screen_width, config.screen_height)
+image garasi = im.Scale("garasi.png", config.screen_width, config.screen_height)
 image kamar = im.Scale("kamar.jpg", config.screen_width, config.screen_height)
-image kantor = im.Scale("kantor.jpg", config.screen_width, config.screen_height)
-image kelas = im.Scale("kelas.jpg", config.screen_width, config.screen_height)
-image parkiran_sekolah = im.Scale("parkiran sekolah.jpg", config.screen_width, config.screen_height)
-image pecel_lele = im.Scale("pecel lele.jpg", config.screen_width, config.screen_height)
+image kantor = im.Scale("kantor.png", config.screen_width, config.screen_height)
+image kelas = im.Scale("kelas.png", config.screen_width, config.screen_height)
+image parkiran_sekolah = im.Scale("parkiran sekolah.png", config.screen_width, config.screen_height)
+image pecel_lele = im.Scale("pecel lele.png", config.screen_width, config.screen_height)
 image ruang_keluarga = im.Scale("ruang keluarga.jpg", config.screen_width, config.screen_height)
 image bapak = im.Scale("bapak.png", 500, 1000) 
-image anita = im.Scale("anita.png", 700, 1000)  
+image dita = im.Scale("dita.png", 400, 500)   
+image anita = im.Scale("anita.png", 600, 1000)  
 image dypho = im.Scale("dypho.png", 500, 1000) 
 image rama = im.Scale("rama.png", 500, 1000) 
 image teman1 = im.Scale("teman1.png", 400, 800) 
 image teman2 = im.Scale("teman2.png", 400, 800) 
-image dita = im.Scale("dita.png", 250, 400)   
 image Atasan = im.Scale("Atasan.png", 250, 500) 
+image text = Text("Waktu makan malam sudah tiba. Anita, Dypho, dan Dita telah berkumpul di meja makan. \nNamun, 1 kursi masih belum terisi.", size = 22)
 
 # Define the transitions
 define dissolve = Dissolve(1.0)
@@ -34,20 +35,26 @@ define fade = Fade(1.0, 0.5, 1.0)
 
 # Start the script
 label start:
+    #cerita singkat 
+    show text at Transform(xpos=150, ypos=300,) with dissolve
     # Intro
     scene bg_dining_room with fade
+    play music "Intro(1).mp3" fadeout 1
 
     # Show the characters with their images and transitions
-    show anita at Transform(xpos=0.0, ypos=200,) with moveinleft
+    show anita at Transform(xpos=-50, ypos=200,) with moveinleft
     show dypho at Transform(xpos=0.5, ypos=150, xanchor=0.5) with dissolve
-    show dita at right with moveinright
+    show dita at Transform(xpos=900, ypos=250) with moveinright
 
-    n "{vspace=-100}Waktu makan malam sudah tiba. Anita, Dypho, dan Dita telah berkumpul di meja makan. Namun, 1 kursi masih belum terisi."
+    play sound "scene(1)_makan di dapur.mp3"
+    queue sound "scene(1)_makan di dapur.mp3"
+
     d "Ibu, Ayah belum pulang?"
     a "Kak, tolong telepon Ayah."
     dy "Baik, Ibu."
-    n "Yang dimintai tolong pun menurut."
-    n "\"Nomor yang Anda tuju sedang tidak aktif atau berada di luar jangkauan.\""
+    n "Yang dimintai tolong menurut."
+    play sound "sfx_phone_calling.mp3"
+    n "Nomor yang Anda tuju sedang tidak aktif atau berada di luar jangkauan."
     n "Dypho kembali menghubungi Ayahnya."
     n "Nihil, panggilannya lagi-lagi tidak diangkat."
     a "Mungkin Ayah lembur dan lagi gak bisa diganggu. Kita makan duluan aja."
@@ -70,8 +77,10 @@ label start:
     
     # Dypho's perspective
     label dypho_pov:
+        play music "scene(2)_dypho_bangun.mp3" fadeout 1
         scene kamar with fade
 
+        play sound "sfx_alarm.mp3"
         n "(suara alarm)"
         show dypho at Transform(xpos=0.5, ypos=10, xanchor=0.5) with dissolve
         dy "Perlahan Dypho bangkit dari kasurnya. Dilihatnya jam di dinding kamar. Jam 06.20! Segera dia berlari ke kamar Dita untuk membangunkannya."
@@ -134,11 +143,14 @@ label start:
         dy "Pokoknya kalau aku telat, kamu harus tanggung jawab."
         d "Suruh siapa telat bangunin!"
         dy "Tanpa memperpanjang perdebatan Dypho langsung mengendarai motornya."
+        play sound "sfx_motor.mp3"
         n "(suara motor)"
 
         scene parkiran_sekolah with fade
+        play music "scene_sekolah.mp3" fadeout 1
         show dypho at Transform(xpos=0.5, ypos=200, xanchor=0.5) with dissolve
 
+        play sound "sfx_bel_sekolah.mp3"
         n "(suara bel sekolah)"
         dy "Hhhhh, hampir saja terlambat."
 
@@ -215,10 +227,10 @@ label start:
                 dy "Iya, pak."
                 p "Siaap."
                 n "Sambil menunggu pesanannya Dypho bermain-main dengan pikirannya."
+                play music "scene_sedih.mp3" fadeout 1
                 dy "Hhh, akhir-akhir ini keadaan makin sulit. Awal-awal ayah menghilang, ibu masih memiliki setidaknya harapan positif bahwa ayah akan segera kembali."
                 dy "Tapi setelah 6 bulan, ibu mulai tampak stress dan kesusahan. Saat itu ibu memutuskan untuk bekerja lagi karena tabungan dari gaji ayah hampir menipis. Dan saat itu juga ibu perlahan menjadi orang yang tidak aku kenal."
-                dy "Aku bisa memahami kalau pekerjaan ibu di kantor begitu berat. Aku juga paham ibu sedang menjalankan kewajibannya sebagai ibu bagi aku dan Dita, beristirahat setelah bekerja dan di hari libur juga merupakan hak ibu."
-                dy "Tapi rasanya tetap ada yang tidak benar. Apalagi Dita terbilang masih kecil, dia berhak mendapat perhatian dari orang tuanya, bukan hanya aku sebagai kakaknya."
+                dy "Aku bisa memahami kalau pekerjaan ibu di kantor begitu berat. Aku juga paham ibu sedang menjalankan kewajibannya sebagai ibu bagi aku dan Dita, beristirahat setelah bekerja dan di hari libur juga merupakan hak ibu. Tapi rasanya tetap ada yang tidak benar. Apalagi Dita terbilang masih kecil, dia berhak mendapat perhatian dari orang tuanya, bukan hanya aku sebagai kakaknya."
                 dy "Andaikan ayah masih ada.."
                 p "A, jangan melamun! Ini pecel lele nya udah jadi."
                 dy "Oh iya, makasih pak."
@@ -246,15 +258,18 @@ label start:
                 n "Tepat ketika mereka duduk di kursi yang mengelilingi meja makan, hujan turun."
                 dy "Tiba-tiba hujan."
 
+        play sound "sfx_ketok_pintu.mp3"
         n "Tok tok tok."
         dy "Hm? Siapa yang mengetuk pintu? Apa ibu lupa membawa kunci?"
-        n "{size=+20}TOK TOK TOK."
+        play sound "sfx_ketok_pintu.mp3"
+        n "TOK TOK TOK."
         dy "Siapaa?"
         n "Dypho bertanya sambil menghampiri pintu, sedangkan Dita takut-takut mengintip dari ruang makan."
         dy "Ibu?"
         n "Dypho mencoba menebak. Tapi sesampainya di depan pintu ia tahu itu bukan ibunya, dari jendela dia bisa melihat siluet si pengetuk pintu, laki-laki."
         dy "Siapa? Tetangga sebelah? Semoga bukan orang aneh."
         n "Dypho memberanikan diri membuka kunci pintu. Membuka pintu."
+        play sound "sfx_kaget.mp3"
         dy "Siapa-"
         n "Dypho tidak bisa melanjutkan kata-katanya."
         n "Orang yang selama ini dikira telah meninggalkan dunia ini, sekarang berdiri di hadapannya. Ucapan tukang lele itu bukan bohongan."
@@ -265,10 +280,9 @@ label start:
     # POV Anita
 
     label anita_pov:
-        n "Sejak kepergian Baithar Prawono–suami Anita–, Anita mau tidak mau merangkap “jabatan” sebagai ibu rumah tangga sekaligus pencari nafkah."
-        n "Di usianya yang sudah tidak muda, Anita harus mengeluarkan tenaga ekstra untuk mencari dan melamar pekerjaan."
-        n "Sampai akhirnya, Anita kini bekerja sebagai akuntan. Setiap hari, Anita mesti berangkat pagi-pagi sekali dan tiba di rumah saat Dypho dan Dita sudah tidur dikarenakan jarak antara rumah dan kantornya cukup jauh."
-        n "Hal inilah yang menjadi penyebab Anita sudah tidak sempat menyiapkan sarapan dan makan malam untuk kedua anaknya–bahkan untuk dirinya sendiri pun ia tidak memiliki waktu– atau sekadar menanyakan bagaimana hari yang dilalui Dypho dan Dita di sekolah."
+        play music "scene_anita.mp3" fadeout 1
+        n "Sejak kepergian Baithar Prawono–suami Anita–, Anita mau tidak mau merangkap “jabatan” sebagai ibu rumah tangga sekaligus pencari nafkah. Di usianya yang sudah tidak muda, Anita harus mengeluarkan tenaga ekstra untuk mencari dan melamar pekerjaan. Sampai akhirnya, Anita kini bekerja sebagai akuntan."
+        n "Setiap hari, Anita mesti berangkat pagi-pagi sekali dan tiba di rumah saat Dypho dan Dita sudah tidur dikarenakan jarak antara rumah dan kantornya cukup jauh. Hal inilah yang menjadi penyebab Anita sudah tidak sempat menyiapkan sarapan dan makan malam untuk kedua anaknya–bahkan untuk dirinya sendiri pun ia tidak memiliki waktu– atau sekadar menanyakan bagaimana hari yang dilalui Dypho dan Dita di sekolah."
 
         scene pagi_hari with fade
         show anita at Transform(xpos=0.5, ypos=300, xanchor=0.5) with dissolve
@@ -350,9 +364,11 @@ label start:
         menu:
             "Memeluknya":
                 a "Kedua tangan Anita ia lingkarkan ke tubuh milik Baithar."
+                play sound "sfx_tampar.mp3"
                 b "Sudah. Nanti pipi kamu sakit, Anita."
 
             "Memukulnya":
+                play sound "sfx_tampar.mp3"
                 a "Tangan Anita bahkan bergerak aktif memukul-mukul Sang Suami."
                 b "Sudah. Nanti pipi kamu sakit, Anita."
 
@@ -363,7 +379,7 @@ label start:
     # Epilogue for both POV
     label epilog:
     scene black with fade
-
+    play music "scene_epilog.mp3" fadeout 1
     "Epilog"
     "2020"
     
