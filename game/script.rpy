@@ -14,20 +14,20 @@ define t2 = Character("Teman 2", color="#FF4500") # Orange color for Teman 2
 image bg_dining_room = im.Scale("dapur.png", config.screen_width, config.screen_height)
 image garasi = im.Scale("garasi.png", config.screen_width, config.screen_height)
 image kamar = im.Scale("kamar.jpg", config.screen_width, config.screen_height)
-image kantor = im.Scale("kantor.png", config.screen_width, config.screen_height)
+image kantor = im.Scale("Kantor.jpg", config.screen_width, config.screen_height)
 image kelas = im.Scale("kelas.png", config.screen_width, config.screen_height)
 image parkiran_sekolah = im.Scale("parkiran sekolah.png", config.screen_width, config.screen_height)
-image pecel_lele = im.Scale("pecel lele.png", config.screen_width, config.screen_height)
+image pecel_lele = im.Scale("pecel lele 2.jpg", config.screen_width, config.screen_height)
 image ruang_keluarga = im.Scale("ruang keluarga.jpg", config.screen_width, config.screen_height)
-image bapak = im.Scale("bapak.png", 500, 1000) 
-image dita = im.Scale("dita.png", 400, 500)   
-image anita = im.Scale("anita.png", 600, 1000)  
-image dypho = im.Scale("dypho.png", 500, 1000) 
-image rama = im.Scale("rama.png", 500, 1000) 
-image teman1 = im.Scale("teman1.png", 400, 800) 
-image teman2 = im.Scale("teman2.png", 400, 800) 
+image bapak = im.Scale("bapak.png", 540, 1164) 
+image dita = im.Scale("dita.png", 256, 384)   
+image anita = im.Scale("anita.png", 650, 1000)  
+image dypho = im.Scale("dypho.png", 450, 933) 
+image rama = im.Scale("rama.png", 622, 933) 
+image teman1 = im.Scale("cewe 1.png", 533, 800) 
+image teman2 = im.Scale("cewe 2.png", 400, 600) 
 image Atasan = im.Scale("Atasan.png", 250, 500) 
-image text = Text("Waktu makan malam sudah tiba. Anita, Dypho, dan Dita telah berkumpul di meja makan. \nNamun, 1 kursi masih belum terisi.", size = 22)
+image text = Text("Waktu makan malam sudah tiba. Anita, Dypho, dan Dita telah berkumpul di meja makan. \nNamun, 1 kursi masih belum terisi.{w}", size = 22)
 
 # Define the transitions
 define dissolve = Dissolve(1.0)
@@ -36,7 +36,8 @@ define fade = Fade(1.0, 0.5, 1.0)
 # Start the script
 label start:
     #cerita singkat 
-    show text at Transform(xpos=150, ypos=300,) with dissolve
+    show text at Transform(xpos=150, ypos=300) with dissolve
+    pause
     # Intro
     scene bg_dining_room with fade
     play music "Intro(1).mp3" fadeout 1
@@ -158,7 +159,7 @@ label start:
         n "(suara bel sekolah)"
         dy "Hhhhh, hampir saja terlambat."
 
-        show rama at Transform(xpos=0.0, ypos=200, xanchor=0.0) with dissolve
+        show rama at Transform(xpos=0.0, ypos=215, xanchor=0.0) with dissolve
 
         r "Hei, Dy."
         dy "Hei, baru nyampe juga?"
@@ -198,7 +199,7 @@ label start:
                 show dypho at Transform(xpos=0.5, ypos=100, xanchor=0.5) with dissolve
                 dy "Hai, guys, maaf banget aku hampir lupa kalau hari ini jadwal piketku."
                 show teman1 at Transform(xpos=0.0,ypos=100, xanchor=0.0) with dissolve
-                show teman2 at Transform(xpos=1.0, ypos=10, xanchor=1.0) with dissolve
+                show teman2 at Transform(xpos=1.0,ypos=150, xanchor=1.0) with dissolve
                 t1 "Eh, Dy. Gapapa, gapapa. Malah respek karena kamu memutuskan untuk balik lagi ke kelas, padahal bisa aja kamu kabur."
                 t2 "Asli, Dy. Makasih ya ga kabur. Hari ini kelas lumayan kotor gara-gara kemarin hujan, jadinya banyak lumpur tanah dari sepatu orang-orang."
                 dy "Syukur kalo gitu, keputusanku sudah tepat."
