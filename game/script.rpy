@@ -84,17 +84,20 @@ label start:
         play sound "sfx_alarm.mp3"
         n "(suara alarm)"
         show dypho at Transform(xpos=0.5, ypos=10, xanchor=0.5) with dissolve
-        dy "Perlahan Dypho bangkit dari kasurnya. Dilihatnya jam di dinding kamar. Jam 06.20! Segera dia berlari ke kamar Dita untuk membangunkannya."
+        n "Perlahan Dypho bangkit dari kasurnya. Dilihatnya jam di dinding kamar."
+        n "Jam 06.20!"
+        n "Segera dia berlari ke kamar Dita untuk membangunkannya."
         dy "Dita, bangun! Kau mau sekolah gak?!"
         show dita at right with dissolve
         d "Duh, jam berapa ini?"
         dy "Jam setengah 7! Ayo siap-siap."
 
         hide dita with dissolve
-        dy "Dypho segera memakai seragamnya."
+        n "Dypho segera memakai seragamnya."
         dy "Bodo amat soal mandi, tidak sempat, aku harus mengantar Dita ke SD-nya dan sampai di sekolah sebelum jam 7."
         dy "Oh iya, apakah ibu sudah bangun? Seharusnya ibu pergi bekerja pukul 7 supaya tidak terlambat karena jalanan macet ibukota."
-        dy "Perlahan Dypho membuka pintu kamar ibu. Dia masih tertidur, dengan baju yang dia pakai untuk bekerja kemarin."
+        n "Perlahan Dypho membuka pintu kamar ibu."
+        n "Dia masih tertidur, dengan baju yang dia pakai untuk bekerja kemarin."
 
         scene kamar with fade
         show dypho at Transform(xpos=0.5, ypos=10, xanchor=0.5) with dissolve
@@ -110,13 +113,13 @@ label start:
     label wake_mother:
         show anita at Transform(xpos=0.0, ypos=200) with dissolve
         dy "Bu, bangun, bu. Sudah setengah 7, ibu kan harus siap-siap."
-        a "Anita hanya menggeliat, tangannya memberi isyarat agar Dypho keluar dari kamarnya."
-        dy "Dypho menghela napas, perlahan keluar dan menutup pintu kamar ibunya."
+        n "Anita hanya menggeliat, tangannya memberi isyarat agar Dypho keluar dari kamarnya."
+        n "Dypho menghela napas, perlahan keluar dan menutup pintu kamar ibunya."
         hide anita with dissolve
         jump dypho_pov_continued
 
     label dont_wake_mother:
-        dy "Dypho menggeleng dan menutup pintu kamar ibunya."
+        n "Dypho menggeleng dan menutup pintu kamar ibunya."
         dy "Sudahlah, sepertinya ibu sangat lelah setelah kemarin bekerja."
         jump dypho_pov_continued
 
@@ -132,7 +135,7 @@ label start:
         d "Belum kakk."
         dy "Kamu lagi apa sih? Ayo buruan! Aku tunggu di luar ya."
         d "Iyaa, ini bentar lagi."
-        dy "Dypho memutuskan keluar duluan untuk mengeluarkan motornya dari garasi."
+        n "Dypho memutuskan keluar duluan untuk mengeluarkan motornya dari garasi."
 
         scene garasi with fade
         show dypho at Transform(xpos=0.5, ypos=200, xanchor=0.5) with dissolve
@@ -143,7 +146,7 @@ label start:
         dy "Lelet!"
         dy "Pokoknya kalau aku telat, kamu harus tanggung jawab."
         d "Suruh siapa telat bangunin!"
-        dy "Tanpa memperpanjang perdebatan Dypho langsung mengendarai motornya."
+        n "Tanpa memperpanjang perdebatan Dypho langsung mengendarai motornya."
         play sound "sfx_motor.mp3"
         n "(suara motor)"
 
@@ -271,7 +274,7 @@ label start:
         dy "Ibu?"
         n "Dypho mencoba menebak. Tapi sesampainya di depan pintu ia tahu itu bukan ibunya, dari jendela dia bisa melihat siluet si pengetuk pintu, laki-laki."
         dy "Siapa? Tetangga sebelah? Semoga bukan orang aneh."
-        n "Dypho memberanikan diri membuka kunci pintu. Membuka pintu."
+        n "Dypho memberanikan diri membuka kunci, lalu ia membuka pintu."
         play sound "sfx_kaget.mp3"
         dy "Siapa-"
         n "Dypho tidak bisa melanjutkan kata-katanya."
@@ -407,9 +410,9 @@ label start:
     show bapak at Transform(xpos=0.5, ypos=50, xanchor=0.5) with dissolve
     n "Baithar kini tengah menyantap menu makan siangnya. Tak lama, datang sosok yang sedikit lebih tinggi darinya menempati kursi yang terletak di seberang Baithar."
     n "Ernest Haryono namanya. Saat ini keduanya sedang bekerja di perusahaan yang sama, Wudden's Lab–laboratorium swasta–. Namun, mereka berada pada sub-bidang yang berbeda."
-
+    define e = Character("Ernest", color="#FFD700")
     b "Ernest, kau tahu apa yang baru saja saya temukan?"
-    "Tidak tahu. Tapi, pasti itu memiliki hubungan dengan obat-obatan 'kan? Keahlianmu di sana."
+    e "Tidak tahu. Tapi, pasti itu memiliki hubungan dengan obat-obatan 'kan? Keahlianmu di sana."
 
     b "Betul."
     n "Baithar mengangguk sembari menelan makanan di mulutnya. Ia kemudian mengecilkan volume suaranya."
