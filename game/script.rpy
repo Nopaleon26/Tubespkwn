@@ -52,9 +52,9 @@ label start:
     d "Ibu, Ayah belum pulang?"
     a "Kak, tolong telepon Ayah."
     dy "Baik, Ibu."
-    n "Yang dimintai tolong menurut."
+    n "Yang dimintai tolong pun menurut."
     play sound "sfx_phone_calling.mp3"
-    n "Nomor yang Anda tuju sedang tidak aktif atau berada di luar jangkauan."
+    n "\"Nomor yang Anda tuju sedang tidak aktif atau berada di luar jangkauan.\""
     n "Dypho kembali menghubungi Ayahnya."
     n "Nihil, panggilannya lagi-lagi tidak diangkat."
     a "Mungkin Ayah lembur dan lagi gak bisa diganggu. Kita makan duluan aja."
@@ -65,7 +65,8 @@ label start:
     hide dita with dissolve
 
     # narration
-    n "Pagi hari ini ternyata adalah saat terakhir Anita menyiapkan secangkir kopi untuk suaminya dan Dypho beserta Dita diantarkan ke sekolah oleh Baithar. Sejak malam itu, Baithar tidak pernah kembali ke rumah. Eksistensinya hilang tanpa kabar."
+    n "Pagi hari ini ternyata adalah saat terakhir Anita menyiapkan secangkir kopi untuk suaminya dan Dypho beserta Dita diantarkan ke sekolah oleh Baithar."
+    n "Sejak malam itu, Baithar tidak pernah kembali ke rumah. Eksistensinya hilang tanpa kabar."
     n "Lantas, kemanakah Baithar pergi? Lalu, bagaimana Anita dan Dypho melanjutkan kehidupannya?"
 
     # The Game now give a choice to play in Dypho perspective or Anita perspective
@@ -229,8 +230,10 @@ label start:
                 n "Sambil menunggu pesanannya Dypho bermain-main dengan pikirannya."
                 play music "scene_sedih.mp3" fadeout 1
                 dy "Hhh, akhir-akhir ini keadaan makin sulit. Awal-awal ayah menghilang, ibu masih memiliki setidaknya harapan positif bahwa ayah akan segera kembali."
-                dy "Tapi setelah 6 bulan, ibu mulai tampak stress dan kesusahan. Saat itu ibu memutuskan untuk bekerja lagi karena tabungan dari gaji ayah hampir menipis. Dan saat itu juga ibu perlahan menjadi orang yang tidak aku kenal."
-                dy "Aku bisa memahami kalau pekerjaan ibu di kantor begitu berat. Aku juga paham ibu sedang menjalankan kewajibannya sebagai ibu bagi aku dan Dita, beristirahat setelah bekerja dan di hari libur juga merupakan hak ibu. Tapi rasanya tetap ada yang tidak benar. Apalagi Dita terbilang masih kecil, dia berhak mendapat perhatian dari orang tuanya, bukan hanya aku sebagai kakaknya."
+                dy "Tapi setelah 6 bulan, ibu mulai tampak stress dan kesusahan. Saat itu ibu memutuskan untuk bekerja lagi karena tabungan dari gaji ayah hampir menipis."
+                dy "Dan saat itu juga ibu perlahan menjadi orang yang tidak aku kenal."
+                dy "Aku bisa memahami kalau pekerjaan ibu di kantor begitu berat. Aku juga paham ibu sedang menjalankan kewajibannya sebagai ibu bagi aku dan Dita, beristirahat setelah bekerja dan di hari libur juga merupakan hak ibu."
+                dy "Tapi rasanya tetap ada yang tidak benar. Apalagi Dita terbilang masih kecil, dia berhak mendapat perhatian dari orang tuanya, bukan hanya aku sebagai kakaknya."
                 dy "Andaikan ayah masih ada.."
                 p "A, jangan melamun! Ini pecel lele nya udah jadi."
                 dy "Oh iya, makasih pak."
@@ -281,18 +284,22 @@ label start:
 
     label anita_pov:
         play music "scene_anita.mp3" fadeout 1
-        n "Sejak kepergian Baithar Prawono–suami Anita–, Anita mau tidak mau merangkap “jabatan” sebagai ibu rumah tangga sekaligus pencari nafkah. Di usianya yang sudah tidak muda, Anita harus mengeluarkan tenaga ekstra untuk mencari dan melamar pekerjaan. Sampai akhirnya, Anita kini bekerja sebagai akuntan."
-        n "Setiap hari, Anita mesti berangkat pagi-pagi sekali dan tiba di rumah saat Dypho dan Dita sudah tidur dikarenakan jarak antara rumah dan kantornya cukup jauh. Hal inilah yang menjadi penyebab Anita sudah tidak sempat menyiapkan sarapan dan makan malam untuk kedua anaknya–bahkan untuk dirinya sendiri pun ia tidak memiliki waktu– atau sekadar menanyakan bagaimana hari yang dilalui Dypho dan Dita di sekolah."
-
+        n "Sejak kepergian Baithar Prawono–suami Anita–, Anita mau tidak mau merangkap “jabatan” sebagai ibu rumah tangga sekaligus pencari nafkah."
+        n "Di usianya yang sudah tidak muda, Anita harus mengeluarkan tenaga ekstra untuk mencari dan melamar pekerjaan. Sampai akhirnya, Anita kini bekerja sebagai akuntan."
+        n "Setiap hari, Anita mesti berangkat pagi-pagi sekali dan tiba di rumah saat Dypho dan Dita sudah tidur dikarenakan jarak antara rumah dan kantornya cukup jauh."
+        n "Hal inilah yang menjadi penyebab Anita sudah tidak sempat menyiapkan sarapan dan makan malam untuk kedua anaknya–bahkan untuk dirinya sendiri pun ia tidak memiliki waktu,"
+        n "atau sekadar menanyakan bagaimana hari yang dilalui Dypho dan Dita di sekolah."
         scene pagi_hari with fade
         show anita at Transform(xpos=0.5, ypos=300, xanchor=0.5) with dissolve
 
-        n "Seperti biasa, sebelum berangkat ke kantor, Anita meninggalkan 1 lembar uang dengan nominal 100.000 di atas meja makan lengkap dengan secarik kertas bertuliskan “Uang ini untuk 3 kali makan Kakak dan Dita.” Setelah selesai dengan urusannya, Anita bergegas pergi."
-
+        n "Seperti biasa, sebelum berangkat ke kantor, Anita meninggalkan 1 lembar uang dengan nominal 100.000 di atas meja makan lengkap dengan secarik kertas bertuliskan:"
+        n "“Uang ini untuk 3 kali makan Kakak dan Dita.”"
+        n "Setelah selesai dengan urusannya, Anita bergegas pergi."
         scene kantor with fade
         show anita at Transform(xpos=0.5, ypos=300, xanchor=0.5) with dissolve
 
-        n "Sesampainya di kantor, Anita langsung mengerjakan tugasnya. Aplikasi Microsoft Word dan Excel pada komputer, bolak-balik dibuka oleh Anita guna mencatat transaksi keuangan dan menyusun laporan. Sesekali Anita meregangkan otot-otot dan memijat pelipisnya karena kelelahan."
+        n "Sesampainya di kantor, Anita langsung mengerjakan tugasnya. Aplikasi Microsoft Word dan Excel pada komputer, bolak-balik dibuka oleh Anita guna mencatat transaksi keuangan dan menyusun laporan."
+        n "Sesekali Anita meregangkan otot-otot dan memijat pelipisnya karena kelelahan."
 
         n "Tak terasa, waktu kini menunjukkan pukul 17:00. Tandanya, jam kerja Anita untuk hari ini sudah selesai. Saat Anita memasukkan barang-barangnya ke dalam tas, tiba-tiba atasannya menghampiri."
 
@@ -323,35 +330,45 @@ label start:
 
         menu:
             "Mengunjungi kamar anak-anaknya":
-                a "Tanpa berpikir panjang, kakinya ia langkahkan menuju kamar milik Dita. Ditemukannya Dita sudah tertidur pulas di atas ranjangnya. Anita kemudian melapisi tubuh putrinya dengan selimut, menjaganya tetap hangat."
-                a "Berikutnya, Anita pergi ke kamar sebelah. Matanya juga menangkap badan sang pemilik terbaring di atas kasur dengan mata terpejam. Kemudian Anita mengusap lembut kepala putranya dan mengucapkan, “Terima kasih, Kak. Ibu minta maaf ya.”"
+                n "Tanpa berpikir panjang, kakinya ia langkahkan menuju kamar milik Dita. Ditemukannya Dita sudah tertidur pulas di atas ranjangnya."
+                n "Anita kemudian melapisi tubuh putrinya dengan selimut, menjaganya tetap hangat."
+                n "Berikutnya, Anita pergi ke kamar sebelah. Matanya juga menangkap badan sang pemilik terbaring di atas kasur dengan mata terpejam."
+                n "Kemudian Anita mengusap lembut kepala putranya dan mengucapkan,"
+                a "Terima kasih, Kak. Ibu minta maaf ya."
 
             "Langsung pergi ke kamarnya":
-                a "Anita sudah berada di dalam kamarnya. Tas dan blazer ia taruh di salah satu sisi kasur. Kakinya ia langkahkan menuju kamar mandi untuk membersihkan diri dan mengganti pakaiannya. Sebelum pergi tidur, ia merasa haus."
+                n "Anita sudah berada di dalam kamarnya. Tas dan blazer ia taruh di salah satu sisi kasur."
+                n "Kakinya ia langkahkan menuju kamar mandi untuk membersihkan diri dan mengganti pakaiannya. Sebelum pergi tidur, ia merasa haus."
 
         scene bg_dining_room with fade
         show anita at Transform(xpos=0.5, ypos=200, xanchor=0.5) with dissolve
 
-        n "Kini Anita berada di dapur. Sebelum mengambil gelas dari dalam rak untuk diisi air putih, langkahnya sempat terhenti ketika melihat wastafel berisi piring dan gelas kotor. Awalnya, Anita berniat untuk mencuci piring-piring tersebut, tetapi tubuhnya terasa amat lelah. Belum lagi, ia harus kembali bekerja besok. Setelah minum, Anita akhirnya memutuskan untuk pergi tidur guna memulihkan energi."
-        n "Hari demi hari berlalu, rutinitas Anita tak banyak berubah. Lembur menjadi hal yang biasa dan hak Anita untuk menerima uang tambahan dari atasannya tak pernah terealisasi. Sementara itu, di rumah, Dypho dan Dita tumbuh besar tanpa banyak merasakan kehangatan seorang ibu. Bahkan, Dita seringkali merasa kesepian dan bertanya-tanya kepada Sang Kakak mengapa Anita jarang berada di rumah."
-
+        n "Kini Anita berada di dapur. Sebelum mengambil gelas dari dalam rak untuk diisi air putih, langkahnya sempat terhenti ketika melihat wastafel berisi piring dan gelas kotor."
+        n "Awalnya, Anita berniat untuk mencuci piring-piring tersebut, tetapi tubuhnya terasa amat lelah. Belum lagi, ia harus kembali bekerja besok."
+        n "Setelah minum, Anita akhirnya memutuskan untuk pergi tidur guna memulihkan energi."
+        n "Hari demi hari berlalu, rutinitas Anita tak banyak berubah. Lembur menjadi hal yang biasa dan hak Anita untuk menerima uang tambahan dari atasannya tak pernah terealisasi."
+        n "Sementara itu, di rumah, Dypho dan Dita tumbuh besar tanpa banyak merasakan kehangatan seorang ibu. Bahkan, Dita seringkali merasa kesepian dan bertanya-tanya kepada Sang Kakak mengapa Anita jarang berada di rumah."
         n "Malam ini, setibanya Anita di rumah, ia baru ingat kalau dirinya lupa meninggalkan uang makan untuk Dypho dan Dita sebab pagi tadi ia terburu-buru berangkat ke kantor dikarenakan bangun terlambat."
 
         a "Ya ampun, aku sampai lupa nyimpen uang buat anak-anak. Anak-anak makan ga ya hari ini?"
 
-        n "Anita bergerak menuju dapur dan kemudian membuka kulkas. Barangkali ia bisa memasak makanan untuk anak-anaknya. Kosong. Kulkasnya tidak berisi apapun. Anita mengacak-acak rambut dan mengutuk dirinya sendiri."
+        n "Anita bergerak menuju dapur dan kemudian membuka kulkas. Barangkali ia bisa memasak makanan untuk anak-anaknya."
+        n "Kosong. Kulkasnya tidak berisi apapun. Anita mengacak-acak rambut dan mengutuk dirinya sendiri."
 
         a "Anita, kamu bahkan ga pantas disebut sebagai ibu!"
 
-        n "Tubuh Anita kini bersandar pada kulkas. Kedua lengannya memeluk lutut yang ditekuk dan kepalanya menunduk. Anita merasa kehilangan sedikit demi sedikit waktu, kesehatan, dan yang paling menyakitkan, hubungan dengan anak-anaknya."
+        n "Tubuh Anita kini bersandar pada kulkas. Kedua lengannya memeluk lutut yang ditekuk dan kepalanya menunduk."
+        n "Anita merasa kehilangan sedikit demi sedikit waktu, kesehatan, dan yang paling menyakitkan, hubungan dengan anak-anaknya."
 
         a "Dypho, Dita, maafkan Ibu. Maaf karena kalian mempunyai ibu yang buruk. Maaf karena Ibu belum mampu mengubah keadaan ini."
 
         n "•••"
 
-        n "Keesokan harinya, Anita memutuskan untuk berbicara dengan atasannya setelah ia menyelesaikan pekerjaannya. Dengan keberanian yang besar, ia menyampaikan keluhan tentang beban kerja yang berlebihan dan haknya sebagai pekerja yang tidak dipenuhi. Namun, atasannya tetap bersikeras dan mengancam akan memecatnya jika Anita terus mengeluh."
+        n "Keesokan harinya, Anita memutuskan untuk berbicara dengan atasannya setelah ia menyelesaikan pekerjaannya."
+        n "Dengan keberanian yang besar, ia menyampaikan keluhan tentang beban kerja yang berlebihan dan haknya sebagai pekerja yang tidak dipenuhi. Namun, atasannya tetap bersikeras dan mengancam akan memecatnya jika Anita terus mengeluh."
 
-        n "Merasa putus asa, Anita pulang ke rumah dengan perasaan campur aduk. Lagi-lagi, ia merasa gagal sebagai seorang ibu dan sebagai seorang pekerja. Setibanya di rumah dengan rasa bersalah dan gelisahnya, netranya menangkap sosok yang sudah lama hilang tengah duduk di kursi ruang tamu."
+        n "Merasa putus asa, Anita pulang ke rumah dengan perasaan campur aduk. Lagi-lagi, ia merasa gagal sebagai seorang ibu dan sebagai seorang pekerja."
+        n "Setibanya di rumah dengan rasa bersalah dan gelisahnya, netranya menangkap sosok yang sudah lama hilang tengah duduk di kursi ruang tamu."
 
         show bapak at Transform(xpos=0.0, ypos=50, xanchor=0.0) with dissolve
 
@@ -364,15 +381,18 @@ label start:
         menu:
             "Memeluknya":
                 a "Kedua tangan Anita ia lingkarkan ke tubuh milik Baithar."
-                play sound "sfx_tampar.mp3"
+                # play sound "sfx_tampar.mp3"                                   Kenapa masih sfx tampar? Sebaiknya delete?
                 b "Sudah. Nanti pipi kamu sakit, Anita."
 
             "Memukulnya":
                 play sound "sfx_tampar.mp3"
                 a "Tangan Anita bahkan bergerak aktif memukul-mukul Sang Suami."
-                b "Sudah. Nanti pipi kamu sakit, Anita."
+                # b "Sudah. Nanti pipi kamu sakit, Anita."                      Kenapa pipinya sakit?
 
-        a "Baithar, kamu kemana selama hampir 4 tahun? Tega ya ninggalin aku sama anak-anak? Kamu tahu kalau selama kamu pergi, Dypho sama Dita ga cuma kehilangan sosok ayah, tapi juga sosok ibu! Kamu tahu kalau aku harus pergi pagi-pagi dan pulang pas anak-anak udah tidur karena lembur?! Kamu tahu kalau aku ga dapat gaji tambahan meskipun udah kerja sampai malam?! Kamu tahu kalau aku bahkan ga bisa jadi ibu yang kasih hak buat anak-anak terima kasih sayang aku?! Kamu tahu kalau aku selama ini selalu dihantui rasa bersalah karena ga bisa membersamai Dypho dan Dita?!"
+        a "Baithar, kamu kemana selama hampir 4 tahun? Tega ya ninggalin aku sama anak-anak?"
+        a "Kamu tahu kalau selama kamu pergi, Dypho sama Dita ga cuma kehilangan sosok ayah, tapi juga sosok ibu! Kamu tahu kalau aku harus pergi pagi-pagi dan pulang pas anak-anak udah tidur karena lembur?!"
+        a "Kamu tahu kalau aku ga dapat gaji tambahan meskipun udah kerja sampai malam?! Kamu tahu kalau aku bahkan ga bisa jadi ibu yang kasih hak buat anak-anak terima kasih sayang aku?!"
+        a "Kamu tahu kalau aku selama ini selalu dihantui rasa bersalah karena ga bisa membersamai Dypho dan Dita?!"
         
         jump epilog
 
